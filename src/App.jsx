@@ -53,7 +53,13 @@ function App() {
             <div className="col-12">
               <Board />
             </div>
-            <div className="col-12">{/* <Popup/> */}</div>
+            {userScore == 10 || aiScore == 10 ? (
+              <div className="col-12">
+                <Popup />
+              </div>
+            ) : (
+              <></>
+            )}
           </Data.Provider>
         </div>
       </div>

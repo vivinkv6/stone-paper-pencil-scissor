@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Data } from "../App";
 
 function Selection() {
@@ -20,6 +20,58 @@ function Selection() {
     setUserScore,
   } = useContext(Data);
 
+  useEffect(() => {
+    if (userIndex == "stone" && aiIndex == "stone") {
+      setUserScore((userScore) => userScore);
+      setAiScore((aiScore) => aiScore + 1);
+    } else if (userIndex == "stone" && aiIndex == "paper") {
+      setUserScore((userScore) => userScore);
+      setAiScore(aiScore + 1);
+    } else if (userIndex == "stone" && aiIndex == "pencil") {
+      setUserScore((userScore) => userScore + 1);
+      setAiScore((aiScore) => aiScore);
+    } else if (userIndex == "stone" && aiIndex == "scissor") {
+      setUserScore((userScore) => userScore + 1);
+      setAiScore((aiScore) => aiScore);
+    } else if (userIndex == "paper" && aiIndex == "stone") {
+      setUserScore((userScore) => userScore + 1);
+      setAiScore((aiScore) => aiScore);
+    } else if (userIndex == "paper" && aiIndex == "paper") {
+      setUserScore((userScore) => userScore);
+      setAiScore((aiScore) => aiScore);
+    } else if (userIndex == "paper" && aiIndex == "pencil") {
+      setUserScore((userScore) => userScore);
+      setAiScore((aiScore) => aiScore + 1);
+    } else if (userIndex == "paper" && aiIndex == "scissor") {
+      setUserScore((userScore) => userScore);
+      setAiScore((aiScore) => aiScore + 1);
+    } else if (userIndex == "pencil" && aiIndex == "stone") {
+      setUserScore((userScore) => userScore);
+      setAiScore((aiScore) => aiScore + 1);
+    } else if (userIndex == "pencil" && aiIndex == "paper") {
+      setUserScore((userScore) => userScore + 1);
+      setAiScore((aiScore) => aiScore);
+    } else if (userIndex == "pencil" && aiIndex == "pencil") {
+      setUserScore((userScore) => userScore);
+      setAiScore((aiScore) => aiScore);
+    } else if (userIndex == "pencil" && aiIndex == "scissor") {
+      setUserScore((userScore) => userScore);
+      setAiScore((aiScore) => aiScore + 1);
+    } else if (userIndex == "scissor" && aiIndex == "stone") {
+      setUserScore((userScore) => userScore);
+      setAiScore((aiScore) => aiScore + 1);
+    } else if (userIndex == "scissor" && aiIndex == "paper") {
+      setUserScore((userScore) => userScore + 1);
+      setAiScore((aiScore) => aiScore);
+    } else if (userIndex == "scissor" && aiIndex == "pencil") {
+      setUserScore((userScore) => userScore + 1);
+      setAiScore((aiScore) => aiScore);
+    } else if (userIndex == "scissor" && aiIndex == "scissor") {
+      setUserScore((userScore) => userScore);
+      setAiScore((aiScore) => aiScore);
+    }
+  }, [userIndex, aiIndex]);
+
   return (
     <div className="py-5">
       <button className="btn btn-primary me-2">
@@ -31,25 +83,11 @@ function Selection() {
             setUser(
               "https://visualpharm.com/assets/940/Hand%20Rock-595b40b85ba036ed117dc17d.svg"
             );
+            console.log(`UserIndex2: ${userIndex}`);
+            console.log(`AiIndex2: ${aiIndex}`);
             setAi(list[randomSelect]);
             setUserIndex(list2[0]);
             setAiIndex(list2[randomSelect]);
-            if (userIndex == "stone" && aiIndex == "stone") {
-              setUserScore((userScore) => userScore);
-              setAiScore((aiScore) => aiScore);
-            }
-            if (userIndex == "stone" && aiIndex == "paper") {
-              setUserScore((userScore) => userScore);
-              setAiScore((aiScore) => aiScore + 1);
-            }
-            if (userIndex == "stone" && aiIndex == "pencil") {
-              setUserScore((userScore) => userScore + 1);
-              setAiScore((aiScore) => aiScore);
-            }
-            if (userIndex == "stone" && aiIndex == "scissor") {
-              setUserScore((userScore) => userScore + 1);
-              setAiScore((aiScore) => aiScore);
-            }
           }}
           height={30}
           width={50}
@@ -68,22 +106,6 @@ function Selection() {
             setAi(list[randomSelect]);
             setUserIndex(list2[1]);
             setAiIndex(list2[randomSelect]);
-            if (userIndex == "paper" && aiIndex == "stone") {
-              setUserScore((userScore) => userScore + 1);
-              setAiScore((aiScore) => aiScore);
-            }
-            if (userIndex == "paper" && aiIndex == "paper") {
-              setUserScore((userScore) => userScore);
-              setAiScore((aiScore) => aiScore);
-            }
-            if (userIndex == "paper" && aiIndex == "pencil") {
-              setUserScore((userScore) => userScore);
-              setAiScore((aiScore) => aiScore + 1);
-            }
-            if (userIndex == "paper" && aiIndex == "scissor") {
-              setUserScore((userScore) => userScore);
-              setAiScore((aiScore) => aiScore + 1);
-            }
           }}
           height={30}
           width={50}
@@ -102,23 +124,6 @@ function Selection() {
             setAi(list[randomSelect]);
             setUserIndex(list2[2]);
             setAiIndex(list2[randomSelect]);
-
-            if (userIndex == "pencil" && aiIndex == "stone") {
-              setUserScore((userScore) => userScore);
-              setAiScore((aiScore) => aiScore + 1);
-            }
-            if (userIndex == "pencil" && aiIndex == "paper") {
-              setUserScore((userScore) => userScore + 1);
-              setAiScore((aiScore) => aiScore);
-            }
-            if (userIndex == "pencil" && aiIndex == "pencil") {
-              setUserScore((userScore) => userScore);
-              setAiScore((aiScore) => aiScore);
-            }
-            if (userIndex == "pencil" && aiIndex == "scissor") {
-              setUserScore((userScore) => userScore);
-              setAiScore((aiScore) => aiScore + 1);
-            }
           }}
           height={30}
           width={50}
@@ -137,23 +142,6 @@ function Selection() {
             setAi(list[randomSelect]);
             setUserIndex(list2[3]);
             setAiIndex(list2[randomSelect]);
-
-            if (userIndex == "scissor" && aiIndex == "stone") {
-              setUserScore((userScore) => userScore);
-              setAiScore((aiScore) => aiScore + 1);
-            }
-            if (userIndex == "scissor" && aiIndex == "paper") {
-              setUserScore((userScore) => userScore + 1);
-              setAiScore((aiScore) => aiScore);
-            }
-            if (userIndex == "scissor" && aiIndex == "pencil") {
-              setUserScore((userScore) => userScore + 1);
-              setAiScore((aiScore) => aiScore);
-            }
-            if (userIndex == "scissor" && aiIndex == "scissor") {
-              setUserScore((userScore) => userScore);
-              setAiScore((aiScore) => aiScore);
-            }
           }}
           height={30}
           width={50}
