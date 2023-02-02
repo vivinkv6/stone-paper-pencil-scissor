@@ -11,7 +11,7 @@ function You() {
             <h2 className="fw-bold mb-3">You</h2>
           </div>
           <div className="col-6">
-            <span className="fw-bold" style={{fontSize:'50px'}}>
+            <span className="fw-bold" style={{fontSize:'40px'}}>
               {userScore}
             </span>
           </div>

@@ -32,7 +32,7 @@ function Ai() {
             )}
           </div>
           <div className="col-6">
-            <span className="px-2 py-2 fw-bold" style={{fontSize:'50px'}}>
+            <span className="px-2 py-2 fw-bold" style={{fontSize:'40px'}}>
               {aiScore}
             </span>
           </div>
