@@ -11,14 +11,14 @@ function You() {
             <h2 className="fw-bold mb-3">You</h2>
           </div>
           <div className="col-6">
-            <span className="border border-5 border-danger px-2 py-2 fw-bold">
+            <span className="fw-bold" style={{fontSize:'50px'}}>
               {userScore}
             </span>
           </div>
           <div className="col-6">
             {user.length > 0 ? (
-              <span className="border border-5 border-danger py-2">
-                <img src={user} height={30} width={50} alt="Rock" />
+              <span className="py-2">
+                <img src={user} height={50} width={50} alt="Rock" />
               </span>
             ) : (
               <></>

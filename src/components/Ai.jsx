@@ -24,15 +24,15 @@ function Ai() {
           </div>
           <div className="col-6">
             {ai.length > 0 ? (
-              <span className="border border-5 border-danger  py-2">
-                <img src={ai} height={30} width={50} alt="Not Found" />
+              <span className="py-2">
+                <img src={ai} height={50} width={50} alt="Not Found" />
               </span>
             ) : (
               <></>
             )}
           </div>
           <div className="col-6">
-            <span className="border border-5 border-danger px-2 py-2 fw-bold">
+            <span className="px-2 py-2 fw-bold" style={{fontSize:'50px'}}>
               {aiScore}
             </span>
           </div>

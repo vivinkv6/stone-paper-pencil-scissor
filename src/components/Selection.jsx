@@ -23,7 +23,7 @@ function Selection() {
   useEffect(() => {
     if (userIndex == "stone" && aiIndex == "stone") {
       setUserScore((userScore) => userScore);
-      setAiScore((aiScore) => aiScore + 1);
+      setAiScore((aiScore) => aiScore);
     } else if (userIndex == "stone" && aiIndex == "paper") {
       setUserScore((userScore) => userScore);
       setAiScore(aiScore + 1);
@@ -74,7 +74,7 @@ function Selection() {
 
   return (
     <div className="py-5">
-      <button className="btn btn-primary me-2">
+      <button className="btn btn-primary me-2 mt-2">
         <img
           src={
             "https://visualpharm.com/assets/940/Hand%20Rock-595b40b85ba036ed117dc17d.svg"
@@ -94,7 +94,7 @@ function Selection() {
           alt="Stone"
         />
       </button>
-      <button className="btn btn-primary  me-2">
+      <button className="btn btn-primary  me-2 mt-2">
         <img
           src={
             "https://visualpharm.com/assets/893/Hand-595b40b75ba036ed117d4dae.svg"
@@ -112,7 +112,7 @@ function Selection() {
           alt="Paper"
         />
       </button>
-      <button className="btn btn-primary  me-2">
+      <button className="btn btn-primary  me-2 mt-2">
         <img
           src={
             "https://visualpharm.com/assets/550/One%20Finger-595b40b65ba036ed117d493d.svg"
@@ -130,7 +130,7 @@ function Selection() {
           alt="Pencil"
         />
       </button>
-      <button className="btn btn-primary  me-2">
+      <button className="btn btn-primary  me-2 mt-2">
         <img
           src={
             "https://visualpharm.com/assets/379/Hand%20Peace-595b40b85ba036ed117dc17b.svg"
