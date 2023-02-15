@@ -14,6 +14,7 @@ function Popup() {
     userIndex,
     user,
     setUser,
+    setHide
   } = useContext(Data);
 
   const clearScore = () => {
@@ -21,6 +22,7 @@ function Popup() {
     setUserScore(0);
     setAi("");
     setUser("");
+    setHide(false)
   };
   return (
     <div className="border border-3 border-primary mt-5 py-5">

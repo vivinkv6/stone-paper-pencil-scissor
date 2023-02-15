@@ -18,6 +18,8 @@ function Selection() {
     setAiScore,
     userScore,
     setUserScore,
+    hide,
+    setHide
   } = useContext(Data);
 
   useEffect(() => {
@@ -73,6 +75,8 @@ function Selection() {
   }, [userIndex, aiIndex]);
 
   return (
+    <>
+    {!hide ? 
     <div className="py-5">
       <button className="btn btn-primary me-2 mt-2">
         <img
@@ -149,6 +153,10 @@ function Selection() {
         />
       </button>
     </div>
+    :
+    <></>
+}
+    </>
   );
 }
 

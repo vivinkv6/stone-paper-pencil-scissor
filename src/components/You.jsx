@@ -2,7 +2,11 @@ import React, { useContext } from "react";
 import { Data } from "../App";
 
 function You() {
-  const { user, setUser, userScore } = useContext(Data);
+  const { user, setUser, userScore,setHide } = useContext(Data);
+  if(userScore == 10)
+  {
+    setHide(true);
+  }
   return (
     <div className="border border-3 border-primary">
       <div className="container">

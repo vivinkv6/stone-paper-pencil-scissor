@@ -12,6 +12,7 @@ function App() {
   const [aiScore, setAiScore] = useState(0);
   const [userIndex, setUserIndex] = useState("");
   const [aiIndex, setAiIndex] = useState("");
+  const [hide,setHide]=useState(false);
 
   const list = [
     "https://visualpharm.com/assets/940/Hand%20Rock-595b40b85ba036ed117dc17d.svg",
@@ -39,6 +40,8 @@ function App() {
     userIndex: userIndex,
     setUserIndex: setUserIndex,
     list2: list2,
+    hide:hide,
+    setHide:setHide
   };
 
   console.log(`userIndex: ${userIndex}`);

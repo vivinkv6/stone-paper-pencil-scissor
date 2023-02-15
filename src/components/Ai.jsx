@@ -13,7 +13,13 @@ function Ai() {
     setUserScore,
     aiIndex,
     userIndex,
+    setHide
   } = useContext(Data);
+
+  if(aiScore == 10)
+  {
+    setHide(true);
+  }
 
   return (
     <div className="border border-3 border-primary">
